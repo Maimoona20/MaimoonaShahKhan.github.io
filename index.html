@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jordan Vance — Cybersecurity Analyst</title>
+<meta name="description" content="Portfolio of a cybersecurity / SOC analyst — projects, skills, certifications and resume.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ TITLEBAR / NAV ============ -->
+<header class="titlebar">
+  <div class="titlebar-row">
+    <div class="tl-dots"><span></span><span></span><span></span></div>
+    <div class="tl-path"><b>maimoona@portfolio</b><span style="color:var(--text-faint)">:</span><span style="color:var(--blue)">~</span><span style="color:var(--text-faint)">$</span></div>
+    <nav class="tl-nav" aria-label="Section navigation">
+      <a href="#whoami" class="active">whoami</a>
+      <a href="#projects">projects</a>
+      <a href="#skills">skills</a>
+      <a href="#resume">resume</a>
+      <a href="#certifications">certs</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </div>
+  <div class="status-strip" aria-hidden="true">
+    <div class="track" id="statusTrack">
+      <!-- duplicated via JS for seamless loop -->
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ HERO / WHOAMI ============ -->
+  <section id="whoami" class="hero">
+    <div class="terminal-window">
+      <div class="terminal-bar">
+        <div class="tl-dots"><span></span><span></span><span></span></div>
+        <span class="title">maimoona@portfolio: ~/whoami</span>
+      </div>
+      <div class="terminal-body">
+        <p class="typed-line"><span class="prompt">maimoona@soc</span><span class="prompt-sep">:</span><span class="prompt-path">~</span><span class="prompt-sep">$</span> <span id="typedCmd"></span><span class="cursor" id="typeCursor"></span></p>
+        <div id="typedOutput" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div class="hero-tags">
+      <span class="tag"><span class="dot">●</span>Blue Team / SOC</span>
+      <span class="tag"><span class="dot">●</span>Threat Detection</span>
+      <span class="tag"><span class="dot">●</span>Incident Response</span>
+      <span class="tag"><span class="dot">●</span>Based in — Karachi / Pak</span>
+    </div>
+
+    <div class="hero-cta">
+      <a href="#projects" class="btn primary">./view_projects.sh</a>
+      <a href="assets/resume/resume.pdf" class="btn" target="_blank" rel="noopener">cat resume.pdf</a>
+      <a href="#contact" class="btn">mail --compose</a>
+    </div>
+  </section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+  <p class="section-label">04 · portfolio</p>
+  <h2 class="cmd-heading"><span class="prompt">$</span><span class="cmd">ls -la ./projects</span></h2>
+
+  <div class="project-grid">
+
+    <!-- FALYS -->
+    <article class="card reveal">
+      <div class="card-head">
+        <h3>FALYS</h3>
+        <span class="severity critical">flagship</span>
+      </div>
+
+      <p>
+        Enterprise File Integrity Monitoring (FIM) platform for Windows and Linux endpoints featuring
+        real-time event collection, behavioural detection, secure agent deployment, and centralized
+        monitoring dashboard.
+      </p>
+
+      <div class="stack-row">
+        <span class="chip">Python</span>
+        <span class="chip">Flask</span>
+        <span class="chip">Watchdog</span>
+        <span class="chip">SQLite</span>
+        <span class="chip">HTTPS</span>
+      </div>
+
+      <div class="card-links">
+        <a href="#" aria-label="View source on GitHub">github ↗</a>
+        <a href="#" aria-label="Read documentation">documentation ↗</a>
+      </div>
+    </article>
+
+    <!-- Wazuh -->
+    <article class="card reveal">
+      <div class="card-head">
+        <h3>Wazuh SIEM Lab</h3>
+        <span class="severity high">completed</span>
+      </div>
+
+      <p>
+        Deployed a Wazuh SIEM proof-of-concept, onboarded Linux endpoints, simulated Shellshock
+        (CVE-2014-6271), and validated detection through alert correlation and threat hunting.
+      </p>
+
+      <div class="stack-row">
+        <span class="chip">Wazuh</span>
+        <span class="chip">SIEM</span>
+        <span class="chip">Linux</span>
+        <span class="chip">Shellshock</span>
+      </div>
+
+      <div class="card-links">
+        <a href="https://github.com/Maimoona20/Wazuh-POC-Setup-and-Use-Case" target="_blank">github ↗</a>
+      </div>
+    </article>
+
+    <!-- Velociraptor -->
+    <article class="card reveal">
+      <div class="card-head">
+        <h3>Velociraptor DFIR Lab</h3>
+        <span class="severity high">completed</span>
+      </div>
+
+      <p>
+        Deployed Velociraptor across multiple Windows endpoints, executed remote VQL hunts,
+        collected forensic artefacts, and analysed endpoint telemetry using simulated attacker techniques.
+      </p>
+
+      <div class="stack-row">
+        <span class="chip">Velociraptor</span>
+        <span class="chip">DFIR</span>
+        <span class="chip">VQL</span>
+        <span class="chip">Windows</span>
+      </div>
+
+      <div class="card-links">
+        <a href="https://github.com/Maimoona20/Velociraptor-POC-Deployment-Test-run" target="_blank">github ↗</a>
+      </div>
+    </article>
+
+    <!-- SocTalk -->
+    <article class="card reveal">
+      <div class="card-head">
+        <h3>SocTalk Integration</h3>
+        <span class="severity med">completed</span>
+      </div>
+
+      <p>
+        Integrated SocTalk with Wazuh SIEM using Docker and MCP, validating automated alert triage,
+        investigation workflows, and human-in-the-loop review using simulated attacks.
+      </p>
+
+      <div class="stack-row">
+        <span class="chip">Docker</span>
+        <span class="chip">Wazuh</span>
+        <span class="chip">MCP</span>
+        <span class="chip">SocTalk</span>
+      </div>
+
+      <div class="card-links">
+        <a href="https://github.com/Maimoona20/SocTalk" target="_blank">github ↗</a>
+      </div>
+    </article>
+
+    <!-- WireGuard -->
+    <article class="card reveal">
+      <div class="card-head">
+        <h3>WireGuard VPN Server</h3>
+        <span class="severity low">completed</span>
+      </div>
+
+      <p>
+        Built a self-hosted WireGuard VPN server with automated deployment,
+        security hardening, and a live terminal-based management dashboard.
+      </p>
+
+      <div class="stack-row">
+        <span class="chip">WireGuard</span>
+        <span class="chip">Linux</span>
+        <span class="chip">Bash</span>
+        <span class="chip">Networking</span>
+      </div>
+
+      <div class="card-links">
+        <a href="https://github.com/Maimoona20/VPN-server-setup" target="_blank">github ↗</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+<section id="skills">
+  <p class="section-label">05 · capabilities</p>
+  <h2 class="cmd-heading"><span class="prompt">$</span><span class="cmd">cat skills.txt</span></h2>
+
+  <div class="skills-grid">
+
+    <div class="skill-panel reveal">
+      <h3>security engineering</h3>
+      <div class="skill-row"><div class="label"><span>File Integrity Monitoring (FIM)</span><span>95%</span></div><div class="bar"><span data-w="95"></span></div></div>
+      <div class="skill-row"><div class="label"><span>Threat Detection & Log Analysis</span><span>90%</span></div><div class="bar"><span data-w="90"></span></div></div>
+      <div class="skill-row"><div class="label"><span>Incident Response & DFIR</span><span>88%</span></div><div class="bar"><span data-w="88"></span></div></div>
+    </div>
+
+    <div class="skill-panel reveal">
+      <h3>security tools</h3>
+      <div class="skill-row"><div class="label"><span>FALYS (Designed & Built)</span><span>100%</span></div><div class="bar"><span data-w="95"></span></div></div>
+      <div class="skill-row"><div class="label"><span>Wazuh SIEM</span><span>90%</span></div><div class="bar"><span data-w="90"></span></div></div>
+      <div class="skill-row"><div class="label"><span>Velociraptor DFIR</span><span>70%</span></div><div class="bar"><span data-w="70"></span></div></div>
+    </div>
+
+    <div class="skill-panel reveal">
+      <h3>network & offensive security</h3>
+      <div class="skill-row"><div class="label"><span>WireGuard VPN</span><span>100%</span></div><div class="bar"><span data-w="100"></span></div></div>
+      <div class="skill-row"><div class="label"><span>Wireshark • Burp Suite • Nmap</span><span>65%</span></div><div class="bar"><span data-w="65"></span></div></div>
+    </div>
+
+    <div class="skill-panel reveal">
+      <h3>development</h3>
+      <div class="skill-row"><div class="label"><span>Python</span><span>90%</span></div><div class="bar"><span data-w="90"></span></div></div>
+      <div class="skill-row"><div class="label"><span>Bash Scripting</span><span>85%</span></div><div class="bar"><span data-w="85"></span></div></div>
+      <div class="skill-row"><div class="label"><span>C++ / C#</span><span>80%</span></div><div class="bar"><span data-w="80"></span></div></div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- ============ RESUME ============ -->
+  <section id="resume">
+    <p class="section-label">02 · documents</p>
+    <h2 class="cmd-heading"><span class="prompt">$</span><span class="cmd">cat resume.pdf</span></h2>
+
+    <div class="doc-grid">
+      <div class="doc-card reveal">
+        <div class="doc-top">
+          <div class="doc-icon">PDF</div>
+          <div class="doc-meta">
+            <div class="name">resume.pdf</div>
+            <div class="sub">/assets/resume/ · updated —</div>
+          </div>
+        </div>
+        <div class="doc-actions">
+          <a class="btn primary" href="assets/resume/resume.pdf" target="_blank" rel="noopener">view</a>
+          <a class="btn" href="assets/resume/resume.pdf" download>download</a>
+        </div>
+      </div>
+
+      <div class="doc-card reveal">
+        <div class="doc-top">
+          <div class="doc-icon">PDF</div>
+          <div class="doc-meta">
+            <div class="name">experience_letter.pdf</div>
+            <div class="sub">/assets/experience/ · updated —</div>
+          </div>
+        </div>
+        <div class="doc-actions">
+          <a class="btn primary" href="assets/experience/experience_letter.pdf" target="_blank" rel="noopener">view</a>
+          <a class="btn" href="assets/experience/experience_letter.pdf" download>download</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATIONS ============ -->
+  <section id="certifications">
+    <p class="section-label">03 · credentials</p>
+    <h2 class="cmd-heading"><span class="prompt">$</span><span class="cmd">ls -la ./certifications</span></h2>
+
+    <div class="doc-grid">
+      <div class="doc-card reveal">
+        <div class="doc-top">
+          <div class="doc-icon">CRT</div>
+          <div class="doc-meta">
+            <div class="name">CCNA</div>
+            <div class="sub">/assets/certificates/ · CCNA</div>
+          </div>
+        </div>
+        <div class="doc-actions">
+          <a class="btn primary" href="assets/certificates/CCNA.pdf" target="_blank" rel="noopener">view</a>
+          <a class="btn" href="assets/certificates/CCNA.pdf" download>download</a>
+        </div>
+      </div>
+
+      <div class="doc-card reveal">
+        <div class="doc-top">
+          <div class="doc-icon">CRT</div>
+          <div class="doc-meta">
+            <div class="name">PITP-NED: Cybersecurity & Ethical Hacking</div>
+            <div class="sub">/assets/certificates/ · PITP</div>
+          </div>
+        </div>
+        <div class="doc-actions">
+          <a class="btn primary" href="assets/certificates/PITP-NED.jpg" target="_blank" rel="noopener">view</a>
+          <a class="btn" href="assets/certificates/PITP-NED.jpg" download>download</a>
+        </div>
+      </div>
+
+      <div class="doc-card reveal">
+        <div class="doc-top">
+          <div class="doc-icon">CRT</div>
+          <div class="doc-meta">
+            <div class="name">DataCamp Python</div>
+            <div class="sub">/assets/certificates/ · DataCamp Python</div>
+          </div>
+        </div>
+        <div class="doc-actions">
+          <a class="btn primary" href="assets/certificates/Python.pdf" target="_blank" rel="noopener">view</a>
+          <a class="btn" href="assets/certificates/Python.pdf" download>download</a>
+        </div>
+      </div>
+
+      <div class="doc-card reveal">
+        <div class="doc-top">
+          <div class="doc-icon">CRT</div>
+          <div class="doc-meta">
+            <div class="name">SMEC-Network Design Competition</div>
+            <div class="sub">/assets/certificates/ · SmecNet</div>
+          </div>
+        </div>
+        <div class="doc-actions">
+          <a class="btn primary" href="assets/certificates/SMEC-networking.jpg" target="_blank" rel="noopener">view</a>
+          <a class="btn" href="assets/certificates/SMEC-networking.jpg" download>download</a>
+        </div>
+      </div>
+
+      <div class="doc-card reveal">
+        <div class="doc-top">
+          <div class="doc-icon">CRT</div>
+          <div class="doc-meta">
+            <div class="name">Nmap</div>
+            <div class="sub">/assets/certificates/ · nmap</div>
+          </div>
+        </div>
+        <div class="doc-actions">
+          <a class="btn primary" href="assets/certificates/Nmap.png" target="_blank" rel="noopener">view</a>
+          <a class="btn" href="assets/certificates/Nmap.png" download>download</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <p class="section-label">06 · reach out</p>
+    <h2 class="cmd-heading"><span class="prompt">$</span><span class="cmd">./contact --new</span></h2>
+
+    <div class="contact-panel reveal">
+      <ul class="contact-list">
+        <li><span class="k">email</span> <a href="khanmaimoonashah@gmail.com">khanmaimoonashah@gmail.com</a></li>
+        <li><span class="k">github</span> <a href="https://github.com/Maimoona20" target="_blank" rel="noopener">github.com/Maimoona20</a></li>
+        <li><span class="k">linkedin</span> <a href="www.linkedin.com/in/maimoona-shah-khan" target="_blank" rel="noopener">linkedin.com/in/maimoona-shah-khan</a></li>
+        <li><span class="k">location</span> <span style="color:var(--text-dim)">Karachi, Pakistan</span></li>
+        <li><span class="k">status</span> <span style="color:var(--green-bright)">● open to opportunities</span></li>
+      </ul>
+
+      <form class="term-form" action="#" method="POST" onsubmit="return false;">
+        <div class="field-line"><label for="cf-name">name</label><input id="cf-name" type="text" placeholder="jane_doe" required></div>
+        <div class="field-line"><label for="cf-email">email</label><input id="cf-email" type="email" placeholder="jane@example.com" required></div>
+        <div class="field-line"><label for="cf-msg" style="align-self:flex-start;margin-top:8px;">message</label><textarea id="cf-msg" rows="3" placeholder="type your message..." required></textarea></div>
+        <button type="submit" class="btn primary">send --secure</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <span>© <span id="year"></span> Maimoona Shah Khan </span>
+  <span class="exit">$ logout</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
