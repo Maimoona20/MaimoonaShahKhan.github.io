@@ -5,7 +5,7 @@ const WHOAMI = {
   command: "whoami --verbose",
   lines: [
     { text: "name       : Maimoona Shah Khan", cls: "out" },
-    { text: "role       : Cybersecurity Analyst / SOC", cls: "out" },
+    { text: "role       : Cybersecurity Engineer", cls: "out" },
     { text: "focus      : Threat Detection · Incident Response · Blue Team · File Integrity Minitoring", cls: "out" },
     { text: "status     : open to opportunities", cls: "Salam" },
     { text: "", cls: "out" },
